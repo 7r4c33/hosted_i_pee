@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>I_pee.mooo.com</title>
+</head>
+<body>
+    <h1>Your I_PEE(IP) Address is: <span id="ipAddress"></span></h1>
+    <p>I_PEE | Free To Use IP Viewer | Developed By Majnek<p>
+    <p>Powered By MUZAPI<p>
+    <p>Thanks To https://freedns.afraid.org For The .MOOO.COM Domain!<p>
+    <script>
+        fetch('https://api.ipify.org?format=json')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('ipAddress').innerText = data.ip;
+            })
+            .catch(error => console.error('Error fetching I_PEE address:', error));
+    </script>
+</body>
+</html>
